@@ -1,0 +1,41 @@
+@import "../../../../../color.scss";
+
+.template-container {
+
+    & .sub-header {
+        width: 100%;
+        color: $regularTextColor;
+        font-family: "Nunito Sans";
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    & .template-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        & li {
+            flex: 0 0 calc(50% - 8px);
+            margin-top: 12px;
+
+            & img {
+                width: 100%;
+            }
+
+            & p.title {
+                font-family: "Nunito Sans";
+                font-size: 14px;
+                line-height: 20px;
+                color: $regularTextColor;
+                margin-bottom: 0;
+                margin-top: 8px;
+            }
+            
+        }
+    }
+}

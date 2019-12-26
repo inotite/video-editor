@@ -1,0 +1,7 @@
+<div class="picker-selector">
+    <ul>
+        <li *ngFor="let item of selectors">
+            <a routerLink="{{item.link}}" routerLinkActive="active-link">{{item.text}}</a>
+        </li>
+    </ul>
+</div>

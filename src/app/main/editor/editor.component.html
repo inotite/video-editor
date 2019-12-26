@@ -1,0 +1,16 @@
+<app-bar-dark [loading]="false"></app-bar-dark>
+<app-ribbon></app-ribbon>
+<mat-sidenav-container class="side-tool-bar-container">
+  <mat-sidenav #sidenav mode="side" opened class="side-tool-bar">
+    <mat-nav-list>
+      <a *ngFor="let item of toolbar" routerLink="{{item.link}}" routerLinkActive="active-link">
+        <img src="{{item.icon}}">
+        <span>{{item.text}}</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-picker></app-picker>
+    <app-canvas-editor></app-canvas-editor>
+  </mat-sidenav-content>
+</mat-sidenav-container>

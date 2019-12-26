@@ -1,0 +1,76 @@
+@import '../../../../../color.scss';
+
+.music-player {
+    height: 48px;
+    background-color: #EDF2F7;
+    border-radius: 8px;
+    width: 100%;
+    position: relative;
+    padding: 8px;
+    font-family: "Nunito Sans";
+    display: flex;
+    align-items: center;
+
+    & .play-button {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 3px 0 rgba(0,0,0,0.05), 0 1px 1px 0 rgba(0,0,0,0.05);
+
+        & img {
+            width: auto;
+        }
+    }
+
+    & .music-title {
+        margin-left: 8px;
+    }
+
+    & .apply-button {
+        height: 32px;
+        width: 80px;
+        border-radius: 4px;
+        background-color: $primaryColor;
+        color: #fff;
+        font-family: "Nunito Sans Bold";
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: auto;
+        text-align: center;
+        padding: 6px 8px;
+        cursor: pointer;
+    }
+
+    & .remove-button {
+        margin-left: 8px;
+        margin-right: 4px;
+    }
+}
+
+.applied {
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.02), 0 4px 6px 1px rgba(0,0,0,0.06);
+    border: 4px solid $primaryColor;
+
+    & .select-badge {
+        height: 24px;
+        border-radius: 4px;
+        background-color: $primaryColor;
+        font-family: "Nunito Sans Bold";
+        font-size: 12px;
+        line-height: 16px;
+        padding: 4px;
+        color: #fff;
+        margin-left: 20px;
+    }
+
+    & .apply-button {
+        color: #718096;
+        background-color: #fff;
+    }
+}

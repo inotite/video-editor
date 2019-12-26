@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="270px" viewBox="0 0 480 270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="thumb-scene-placeholder" fill-rule="nonzero">
+            <g id="Group">
+                <rect id="Rectangle" fill="#F7FAFC" x="0" y="0" width="480" height="270"></rect>
+                <g id="Icon/Image" transform="translate(192.000000, 87.000000)" fill="#E2E8F0">
+                    <path d="M56.88,37.5 C57.732,36.44 59.072,35.868 60.424,36.024 C61.78,36.164 62.968,36.992 63.58,38.212 L63.58,38.212 L79.58,70.212 C80.196,71.448 80.136,72.92 79.404,74.1 C78.672,75.28 77.388,76 76,76 L76,76 L20,76 C18.56,76 17.228,75.228 16.52,73.972 C15.812,72.712 15.828,71.176 16.572,69.94 L16.572,69.94 L28.572,49.94 C29.132,49.004 30.056,48.336 31.124,48.096 C32.184,47.856 33.308,48.068 34.22,48.672 L34.22,48.672 L43.168,54.636 Z M40,20 C44.418278,20 48,23.581722 48,28 C48,32.418278 44.418278,36 40,36 C35.581722,36 32,32.418278 32,28 C32,23.581722 35.581722,20 40,20 Z" id="Fill"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

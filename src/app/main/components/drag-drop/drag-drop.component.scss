@@ -1,0 +1,87 @@
+@import '../../../../color.scss';
+
+.drop-zone {
+    margin: 11px -8px;
+    position: relative;
+
+    & .uploadfilecontainer {
+        background-image: url("../../../../assets/icons/ic-upload-cloud.svg");
+        background-repeat: no-repeat;
+        background-size: 48px;
+        background-position: center 0px;
+        height: 82px;
+        width: 100%;
+        margin: 0;
+        border: 1px dashed #1A202C40;
+        background-color: #fff;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #9ecbec !important;
+            opacity: 0.8;
+        }
+
+        & .uploading {
+            width: 70%;
+            margin: 0 auto;
+
+            & p {
+                color: $primaryColor;
+                margin-bottom: 2px;
+                font-size: 16px;
+
+                &:last-child {
+                    font-size: 14px;
+                    opacity: 0.5;
+                }
+            }
+
+            & .progress-wrapper {
+                background-color: #9F7AEA44;
+                height: 5px;
+                width: 100%;
+                position: relative;
+            
+                & .progress-bar {
+                    background-color: #9F7AEA;
+                    height: 5px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                }
+            }
+
+            & .complete-upload {
+                color: #00D592;
+                margin-bottom: 15px;
+            }
+
+        }
+
+        & .drop-zone-text {
+            font-family: "Nunito Sans";
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 7px;
+
+            & span {
+                color: $primaryColor;
+            }
+
+            & span.not-support {
+                color: #f00;
+            }
+        }
+    }
+
+    & .cancel-upload {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Icon/Music</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Music" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M23,0 L8,0 C7.448,0 7,0.448 7,1 L7,15.762 C6.284,15.282 5.425,15 4.5,15 C2.019,15 0,17.019 0,19.5 C0,21.981 2.019,24 4.5,24 C6.981,24 9,21.981 9,19.5 L9,8 L22,8 L22,13.762 C21.284,13.282 20.425,13 19.5,13 C17.019,13 15,15.019 15,17.5 C15,19.981 17.019,22 19.5,22 C21.981,22 24,19.981 24,17.5 L24,1 C24,0.448 23.552,0 23,0 Z" id="Path" fill="#718096" fill-rule="nonzero"></path>
+    </g>
+</svg>

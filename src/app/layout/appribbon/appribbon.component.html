@@ -1,0 +1,25 @@
+
+<div class="app-ribbon">
+  <div class="back">
+    <a routerLink="['/']">
+      <img src="assets/icons/topbar/arrow-left.svg"><span>Back</span>
+    </a>
+  </div>
+  <p class="ribbon-title">MORYSONG Men Women Summer Beach Flip Flops Casual Grass Lawn Simulation Sandals</p>
+  <div class="duration">
+    <img src="assets/icons/topbar/clock.svg"><span>{{durationText}}</span>
+
+    <div ngbDropdown class="warning-dropdown" *ngIf="duration < 60">
+        <a class="video-warning" id="video-long" ngbDropdownToggle>
+          <img src="assets/icons/ic-info-warn.svg">
+        </a>
+        <div ngbDropdownMenu aria-labelledby="video-long">
+          <div class="warn-box">
+            <img class="warn-emoji" src="assets/graphics/thinking-emoji.svg">
+            <p class="warn-header">Is the video too long?</p>
+            <p class="warn-content">Research shows that the most engaging videos are between 60 to 90 seconds.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

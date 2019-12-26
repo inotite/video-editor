@@ -1,0 +1,19 @@
+@import '../../../../../color.scss';
+
+p {
+    width: 100%;
+    border: 1px dashed #CBD5E0;
+    color: $regularTextColor;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #9F7AEA19;
+        border: 1px dashed $primaryColor;
+    }
+}

@@ -1,0 +1,67 @@
+@import "../../../color.scss";
+
+.side-tool-bar-container {
+  position: absolute;
+  top: 92px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  & .side-tool-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    font-family: "Nunito Sans";
+    color: $regularTextColor;
+    // padding: 16px 10px;
+    padding-top: 8px;
+    margin-left: 1px;
+
+    & mat-nav-list {
+      & a {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0 14px;
+        text-align: center;
+        border-right: 4px solid transparent;
+
+        & img {
+          margin-bottom: 8px;
+        }
+
+        & span {
+          font-size: 14px;
+          line-height: 14px;
+        }
+
+        &.active-link {
+          border-right: 4px solid $primaryColor;
+        }
+
+        &:hover {
+          background-color: #edf2f7;
+        }
+      }
+    }
+  }
+
+  & mat-sidenav-content {
+    display: flex;
+    flex-direction: row;
+
+    & app-picker {
+      width: 480px;
+      position: relative;
+      height: 100%;
+    }
+
+    & app-canvas-editor {
+      position: relative;
+      flex: 1;
+      height: 100%;
+    }
+  }
+}

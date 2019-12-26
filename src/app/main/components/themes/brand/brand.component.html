@@ -1,0 +1,25 @@
+<p class="sub-header">Style presets</p>
+<div class="template-container">
+  <ul class="template-list">
+    <li *ngFor="let item of brands" [ngClass]="{'active': selected == item._id}">
+      <a (click)="onStyleSelect(item._id)" [attr.data-id]="item._id">
+        <img src="{{item.image}}">
+      </a>
+      <span *ngIf="selected == item._id">selected</span>
+    </li>
+  </ul>
+</div>
+<p class="sub-header mt-40 mb-16">Customized styles</p>
+<div ngbDropdown class="brand-select">
+  <a class="btn" id="brand-select" ngbDropdownToggle>Select a brand</a>
+  <div ngbDropdownMenu aria-labelledby="brand-select">
+    <ul>
+      <li>
+        <a class="custom-brand" routerLink="">Main Brand</a>
+        <a class="brand-edit" routerLink="">Edit</a>
+      </li>
+    </ul>
+    <div class="dropdown-divider"></div>
+    <a class="btn brand-create">Manage styles</a>
+  </div>
+</div>

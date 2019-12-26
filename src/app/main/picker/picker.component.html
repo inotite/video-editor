@@ -1,0 +1,7 @@
+<div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto">
+  <perfect-scrollbar class="scroll-container" fxFlex="auto" [config]="config" [scrollIndicators]="true" (psXReachEnd)="onScrollEvent($event)" (psYReachEnd)="onScrollEvent($event)" (psXReachStart)="onScrollEvent($event)" (psYReachStart)="onScrollEvent($event)">
+    <div class="scrollable-content">
+      <router-outlet></router-outlet>
+    </div>
+  </perfect-scrollbar>
+</div>

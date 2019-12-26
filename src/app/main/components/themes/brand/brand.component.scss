@@ -1,0 +1,152 @@
+@import "../../../../../color.scss";
+
+.sub-header {
+    min-height: 24px;
+    color: $regularTextColor;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.brand-select {
+    & .dropdown-toggle {
+        position: relative;
+        display: inline-block;
+        border: 1px solid #1A202C40;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 32px;
+        width: 100%;
+        color: $regularTextColor;
+        font-size: 14px;
+        font-family: "Nunito Sans";
+        line-height: 20px;
+        padding: 6px 8px;
+        font-weight: normal;
+        text-align: left;
+
+        &::after {
+            position: absolute;
+            top: 14px;
+            right: 8px;
+        }
+    }
+
+    & .dropdown-menu {
+        box-shadow: 0 0 1px 1px rgba(0,0,0,0.02), 0 4px 6px 1px rgba(0,0,0,0.06);
+        width: 100%;
+        font-family: "Nunito Sans";
+        padding: 0;
+        border: unset;
+
+        & ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            & li {
+                display: flex;
+                padding: 10px 30px 10px 8.5px;
+                align-items: center;
+
+                & a {
+
+                    &.custom-brand {
+                        padding: 0;
+                        color: $regularTextColor;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    &.brand-edit {
+                        border: 1px solid #1A202C0A;
+                        border-radius: 4px;
+                        background-color: #1A202C80;
+                        color: #fff;
+                        font-family: "Nunito Sans Bold";
+                        font-size: 12px;
+                        line-height: 16px;
+                        text-align: center;
+                        padding: 4px 3.5px;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+        & .dropdown-divider {
+            margin: 0;
+            border-top: 1px solid #1A202C0A;
+        }
+
+        & .brand-create {
+            font-family: "Nunito Sans Bold";
+            font-size: 12px;
+            line-height: 16px;
+            border: 1px solid #1A202C;
+            opacity: 0.5;
+            border-radius: 4px;
+            padding: 4px 3.5px;
+            margin: 8px;
+        }
+    }
+}
+
+
+.template-container {
+
+    & .template-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        & li {
+            flex: 0 0 calc(50% - 8px);
+            margin-top: 16px;
+            border: 4px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+
+            & img {
+                width: 100%;
+                border-radius: 4px;
+            }
+
+            &:hover, &.active {
+                border: 4px solid $primaryColor;
+
+                & img {
+                    border-radius: 0px;
+                }
+            }
+
+            & span {
+                position: absolute;
+                left: 12px;
+                top: 12px;
+                font-size: 10px;
+                line-height: 14px;
+                font-family: "Nunito Sans Bold";
+                color: #fff;
+                border-radius: 4px;
+                background-color: $primaryColor;
+                padding: 4px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

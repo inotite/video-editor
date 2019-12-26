@@ -1,0 +1,20 @@
+<app-bar-dark [loading]="true"></app-bar-dark>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sparka-progress-bar">
+            <span [ngStyle]="{'left.%': progress}" class="progress-bar-text">{{progress}}%</span>
+            <div class="progress-bar-wrapper">
+              <div [ngStyle]="{'width.%': progress}" class="progress-bar-progress"></div>
+            </div>
+            <div class="progress-text-wrapper">
+              <p class="progress-text">Sparking up your product</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

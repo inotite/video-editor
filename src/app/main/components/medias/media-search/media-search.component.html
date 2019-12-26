@@ -1,0 +1,49 @@
+<div class="search-bar">
+  <div class="search-box">
+    <img class="search-icon" src="assets/icons/editor/search.svg">
+    <input type="text" class="form-control search-input" (keyup.enter)="onSearch($event)"
+      placeholder="Search millions videos and photos">
+  </div>
+  <div ngbDropdown class="filter-select">
+    <a class="btn" id="filter-select" ngbDropdownToggle>Filter</a>
+    <div ngbDropdownMenu aria-labelledby="filter-select">
+      <ul>
+        <li>
+          <mat-checkbox>Images</mat-checkbox>
+        </li>
+        <li>
+          <mat-checkbox>Videos</mat-checkbox>
+        </li>
+        <li>
+          <mat-checkbox>Gifs</mat-checkbox>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="product-type">
+  <ul>
+    <li *ngFor="let item of types">
+      <a routerLink="{{item.link}}">{{item.text}}</a>
+    </li>
+  </ul>
+</div>
+
+<div class="template-container">
+  <ul class="template-list">
+    <li *ngFor="let item of items">
+      <a>
+        <img src="{{item.src.tiny}}" *ngIf="!item.duration" draggable [dragData]="item">
+        <video preload="none" loop muted="true" *ngIf="item.duration" draggable [dragData]="item"
+          (mouseover)="playVideo($event)" (mouseout)="stopVideo($event)"
+          [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+          <source src="{{item.video_files[0].link}}">
+        </video>
+        <!-- <img src="{{item.image}}" *ngIf="item.duration" draggable [dragData]="item.image" dragImage="assets/graphics/drag-placeholder@2x.png"> -->
+      </a>
+      <span class="play-button" *ngIf="item.duration">
+        <img src="assets/icons/editor/play.svg">
+      </span>
+    </li>
+  </ul>
+</div>

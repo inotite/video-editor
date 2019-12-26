@@ -1,0 +1,15 @@
+@import '../../../../../color.scss';
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 40px 0;
+
+    & li {
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

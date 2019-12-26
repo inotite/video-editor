@@ -1,0 +1,21 @@
+
+<div class="format-header">
+    <p class="title">Video Resolution</p>
+    <div ngbDropdown class="filter-select">
+        <a class="btn" id="filter-select" ngbDropdownToggle>Best(1080p)</a>
+        <div ngbDropdownMenu aria-labelledby="filter-select">
+            <span ngbDropdownItem>Best(1080p)</span>
+            <span ngbDropdownItem>Good(720p)</span>
+        </div>
+    </div>
+</div>
+<div class="format-content">
+    <div class="search-box">
+        <img class="search-icon" src="assets/icons/editor/search.svg">
+        <input type="text" class="form-control search-input" placeholder="Search millions videos and photos">
+        <img class="info-icon" src="assets/icons/ic-info.svg">
+    </div>
+    <app-social-slide [items]="facebook" [title]="facebookTitle" (itemFormatEvent)="onItemSelectEvent($event)" [selectedId]="selectedId"></app-social-slide>
+    <app-social-slide [items]="instagram" [title]="instagramTitle" (itemFormatEvent)="onItemSelectEvent($event)" [selectedId]="selectedId"></app-social-slide>
+    <app-social-slide [items]="youtube" [title]="youtubeTitle" (itemFormatEvent)="onItemSelectEvent($event)" [selectedId]="selectedId"></app-social-slide>
+</div>

@@ -1,0 +1,12 @@
+
+<div class="social-container">
+    <div class="social-title">
+        <img src="{{title.icon}}">
+        <span>{{title.text}}</span>
+    </div>
+    <ul class="social-slide">
+        <li *ngFor="let item of items" [ngStyle]="{'display': item.id !== 8 ? 'block' : 'none'}">
+            <app-single-slide [item]="item" (selectFormatEvent)="onSelectFormatEvent($event)" [selectedId]="selectedId"></app-single-slide>
+        </li>
+    </ul>
+</div>

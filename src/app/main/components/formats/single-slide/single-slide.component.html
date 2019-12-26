@@ -1,0 +1,10 @@
+<div class="social-single-slide" [ngClass]="{'slide-active': item.id == selectedId}" (click)="itemSelect($event)">
+    <div class="slide-checked">
+        <img src="assets/icons/ic-checkmark.svg">
+    </div>
+    <img src="{{item.image}}">
+    <div class="slide-menu">
+        
+    </div>
+</div>
+<span class="social-single-title">{{item.text}}</span>

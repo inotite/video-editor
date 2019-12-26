@@ -1,0 +1,184 @@
+
+{
+    "mediaitems": {
+        "page": 1,
+        "per_page": 15,
+        "total_results": 9,
+        "url": "https://www.pexels.com/search/example%20query/",
+        "next_page": "https://api.pexels.com/v1/search/?page=2&per_page=15&query=example+query",
+        "photos": [
+            {
+                "width": 1000,
+                "height": 1000,
+                "url": "https://www.pexels.com/photo/12345",
+                "photographer": "Name",
+                "src": {
+                    "original": "http://www.testdev.co/photos/bread.jpg",
+                    "large": "https://*.jpg",
+                    "large2x": "https://*.jpg",
+                    "medium": "https://*.jpg",
+                    "small": "https://*.jpg",
+                    "portrait": "https://*.jpg",
+                    "landscape": "https://*.jpg",
+                    "tiny": "https://*.jpg"
+                }
+            },
+            {
+                "width": 1000,
+                "height": 1000,
+                "url": "https://www.pexels.com/photo/123456",
+                "photographer": "Name2",
+                "src": {
+                    "original": "http://www.testdev.co/photos/bridge.jpg",
+                    "large": "https://*.jpg",
+                    "large2x": "https://*.jpg",
+                    "medium": "https://*.jpg",
+                    "small": "https://*.jpg",
+                    "portrait": "https://*.jpg",
+                    "landscape": "https://*.jpg",
+                    "tiny": "https://*.jpg"
+                }
+            },
+            {
+                "width": 1000,
+                "height": 1000,
+                "url": "https://www.pexels.com/photo/1234567",
+                "photographer": "Name3",
+                "src": {
+                    "original": "http://www.testdev.co/photos/diving.jpg",
+                    "large": "https://*.jpg",
+                    "large2x": "https://*.jpg",
+                    "medium": "https://*.jpg",
+                    "small": "https://*.jpg",
+                    "portrait": "https://*.jpg",
+                    "landscape": "https://*.jpg",
+                    "tiny": "https://*.jpg"
+                }
+            },
+            {
+                "width": 1000,
+                "height": 1000,
+                "url": "https://www.pexels.com/photo/1233333",
+                "photographer": "Name2",
+                "src": {
+                    "original": "http://www.testdev.co/photos/forest.jpg",
+                    "large": "https://*.jpg",
+                    "large2x": "https://*.jpg",
+                    "medium": "https://*.jpg",
+                    "small": "https://*.jpg",
+                    "portrait": "https://*.jpg",
+                    "landscape": "https://*.jpg",
+                    "tiny": "https://*.jpg"
+                }
+            },
+            {
+                "width": 1000,
+                "height": 1000,
+                "url": "https://www.pexels.com/photo/1256",
+                "photographer": "Name3",
+                "src": {
+                    "original": "http://www.testdev.co/photos/horses.jpg",
+                    "large": "https://*.jpg",
+                    "large2x": "https://*.jpg",
+                    "medium": "https://*.jpg",
+                    "small": "https://*.jpg",
+                    "portrait": "https://*.jpg",
+                    "landscape": "https://*.jpg",
+                    "tiny": "https://*.jpg"
+                }
+            },
+            {
+                "width": 1000,
+                "height": 1000,
+                "url": "https://www.pexels.com/photo/1213456",
+                "photographer": "Name5",
+                "src": {
+                    "original": "http://www.testdev.co/photos/sea_beach.jpg",
+                    "large": "https://*.jpg",
+                    "large2x": "https://*.jpg",
+                    "medium": "https://*.jpg",
+                    "small": "https://*.jpg",
+                    "portrait": "https://*.jpg",
+                    "landscape": "https://*.jpg",
+                    "tiny": "https://*.jpg"
+                }
+            },
+            {
+                "width": 1000,
+                "height": 1000,
+                "url": "https://www.pexels.com/photo/123dd456",
+                "photographer": "Name2",
+                "src": {
+                    "original": "http://www.testdev.co/photos/sea_waves.jpg",
+                    "large": "https://*.jpg",
+                    "large2x": "https://*.jpg",
+                    "medium": "https://*.jpg",
+                    "small": "https://*.jpg",
+                    "portrait": "https://*.jpg",
+                    "landscape": "https://*.jpg",
+                    "tiny": "https://*.jpg"
+                }
+            },
+            {
+                "width": 1000,
+                "height": 1000,
+                "url": "https://www.pexels.com/photo/1234564334",
+                "photographer": "Name2",
+                "src": {
+                    "original": "http://www.testdev.co/photos/shoes.jpg",
+                    "large": "https://*.jpg",
+                    "large2x": "https://*.jpg",
+                    "medium": "https://*.jpg",
+                    "small": "https://*.jpg",
+                    "portrait": "https://*.jpg",
+                    "landscape": "https://*.jpg",
+                    "tiny": "https://*.jpg"
+                }
+            },
+            {
+                "width": 1000,
+                "height": 1000,
+                "url": "https://www.pexels.com/photo/123456",
+                "photographer": "Name2",
+                "src": {
+                    "original": "http://www.testdev.co/photos/sunset_sea.jpg",
+                    "large": "https://*.jpg",
+                    "large2x": "https://*.jpg",
+                    "medium": "https://*.jpg",
+                    "small": "https://*.jpg",
+                    "portrait": "https://*.jpg",
+                    "landscape": "https://*.jpg",
+                    "tiny": "https://*.jpg"
+                }
+            }
+        ]
+    },
+    "currentslides": [
+        {
+            "id": 1,
+            "image": "http://www.testdev.co/photos/tools.jpg",
+            "text": {
+                "content": "This is a cool product",
+                "size": "s",
+                "position": 1,
+                "animation": "fadein"
+            },
+            "duration": 6,
+            "position": 1,
+            "animation": "fadein"
+        },
+        {
+            "id": 2,
+            "image": "http://www.testdev.co/photos/trees.jpg",
+            "text": {
+                "content": "It has plenty of benefits",
+                "size": "m",
+                "position": 6,
+                "animation": "fadein"
+            },
+            "duration": 10,
+            "position": 2,
+            "animation": "fadein"
+        }
+    ]
+}

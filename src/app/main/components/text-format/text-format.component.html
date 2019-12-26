@@ -1,0 +1,42 @@
+<div class="text-formatter-wrapper" #formatAlign>
+  <div class="text-formatter">
+    <mat-button-toggle-group #group="matButtonToggleGroup" value="{{textSize}}">
+      <mat-button-toggle value="s" (change)="fontSizeChange($event.value)" aria-label="Text small">
+        S
+      </mat-button-toggle>
+      <mat-button-toggle value="m" (change)="fontSizeChange($event.value)" aria-label="Text medium">
+        M
+      </mat-button-toggle>
+      <mat-button-toggle value="l" (change)="fontSizeChange($event.value)" aria-label="Text large">
+        L
+      </mat-button-toggle>
+      <mat-button-toggle value="xl" (change)="fontSizeChange($event.value)" aria-label="Text large">
+        XL
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+    <a class="highlight-text" (click)="highlightText($event)">
+      <img src="assets/icons/{{highlight ? 'ic-text-highlight-active' : 'ic-text-highlight'}}.svg">
+    </a>
+    <div ngbDropdown class="align-select" #alignDrop="ngbDropdown" [autoClose]="true" (openChange)="openChange($event)">
+      <a class="btn" id="align-select" ngbDropdownToggle>
+        <img src="assets/icons/ic-grid.svg" #position>
+      </a>
+      <div ngbDropdownMenu aria-labelledby="align-select">
+        <div class="alignment-wrapper">
+          <p class="text-position">Text Position</p>
+          <div class="alignment-content">
+            <div id="1" (click)="alignmentChange($event.srcElement.id)" [ngClass]="{'selected': textPosition == 1}"></div>
+            <div id="2" (click)="alignmentChange($event.srcElement.id)" [ngClass]="{'selected': textPosition == 2}"></div>
+            <div id="3" (click)="alignmentChange($event.srcElement.id)" [ngClass]="{'selected': textPosition == 3}"></div>
+            <div id="4" (click)="alignmentChange($event.srcElement.id)" [ngClass]="{'selected': textPosition == 4}"></div>
+            <div id="5" (click)="alignmentChange($event.srcElement.id)" [ngClass]="{'selected': textPosition == 5}"></div>
+            <div id="6" (click)="alignmentChange($event.srcElement.id)" [ngClass]="{'selected': textPosition == 6}"></div>
+            <div id="7" (click)="alignmentChange($event.srcElement.id)" [ngClass]="{'selected': textPosition == 7}"></div>
+            <div id="8" (click)="alignmentChange($event.srcElement.id)" [ngClass]="{'selected': textPosition == 8}"></div>
+            <div id="9" (click)="alignmentChange($event.srcElement.id)" [ngClass]="{'selected': textPosition == 9}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

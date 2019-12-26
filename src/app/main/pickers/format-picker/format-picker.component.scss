@@ -1,0 +1,93 @@
+@import '../../../../color.scss';
+
+.format-header {
+    display: flex;
+    height: 64px;
+    border-bottom: 1px solid #E2E8F0;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 17px;
+
+    & .title {
+        margin: 0;
+    }
+
+    & .filter-select{
+        margin-left: auto;
+
+        & .dropdown-toggle {
+            position: relative;
+            display: inline-block;
+            border: 1px solid #1A202C40;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: 32px;
+            width: 153px;
+            color: $regularTextColor;
+            font-size: 14px;
+            font-family: "Nunito Sans";
+            line-height: 20px;
+            padding: 6px 8px;
+            font-weight: normal;
+            text-align: left;
+
+            &::after {
+                position: absolute;
+                top: 14px;
+                right: 8px;
+            }
+        }
+
+        & .dropdown-menu {
+            box-shadow: 0 0 1px 1px rgba(0,0,0,0.02), 0 4px 6px 1px rgba(0,0,0,0.06);
+            // width: 264px;
+            font-family: "Nunito Sans";
+            padding: 3px 7px 11px;
+            border: unset;
+            border-radius: 4px;
+
+            & ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                & li {
+                    display: flex;
+                    padding: 6px 8px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+.format-content {
+    padding: 15px 24px;
+
+    & .search-box {
+        position: relative;
+        flex: 1 1 auto;
+
+        & .search-icon {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+        }
+
+        & .search-input {
+            font-family: "Nunito Sans";
+            height: 32px;
+            font-size: 14px;
+            line-height: 20px;
+            color: $secondaryColor;
+            padding: 6px 36px;
+            width: 100%;
+        }
+
+        & .info-icon {
+            position: absolute;
+            top: 4px;
+            right: 8px;
+        }
+    }
+}

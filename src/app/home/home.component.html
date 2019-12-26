@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container rel-div">
+  <p class="create-engaging-video">
+    Create engaging videos for your amazon product
+  </p>
+  <p class="start-now-it-s-fast">Start now! it's Fast, Easy and Free</p>
+  <span class="circle circle1"></span>
+  <div class="row search-container">
+    <div class="col-md-6 offset-md-2">
+      <input
+        class="form-control home-url"
+        type="url"
+        placeholder="Enter your Amazon product URL"
+        #amazonUrl
+      />
+    </div>
+    <div class="col-md-2">
+      <a (click)="createVideo($event)" class="btn video-button"
+        >Create a Video</a
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <img src="assets/images/slides/scene-1@2x.jpg" />
+    </div>
+  </div>
+  <!-- <div class="third-sign-up"> -->
+  <p class="add-a-spark-of-video text-center">
+    Add a spark of video to your products today
+  </p>
+  <div class="sign-up-container text-center">
+    <input
+      type="button"
+      class="btn sign-up-btn facebook-sign-up"
+      value="Sign Up with Facebook"
+    />
+    <input
+      type="button"
+      class="btn sign-up-btn email-sign-up"
+      value="Sign Up with Email"
+    />
+  </div>
+  <!-- </div> -->
+</div>
+<app-footer></app-footer>

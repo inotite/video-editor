@@ -1,0 +1,22 @@
+<div class="scene-advanced">
+  <div mat-dialog-title>
+    <p class="dialog-title">Scene advanced options</p>
+    <a href="javascript:;" class="dialog-title-close" (click)="onClose()"><img src="assets/icons/ic-close.svg"></a>
+  </div>
+  <div mat-dialog-content>
+    <div class="scene-edit">
+      <p class="scene-edit-title">Fit Media</p>
+      <p class="scene-desc">Click and drag for a better fit</p>
+      <div class="pic-cropper">
+        <img class="scene-pic" #cropImage src="{{data.image}}">
+        <div class="crop-handle" [ngStyle]="{'left.px': data.left, 'top.px': data.top}" #cropHandle (mousemove)="onDragCrop($event)"></div>
+      </div>
+    </div>
+    <div class="scene-animation">
+      <p>Text Animation Type</p>
+    </div>
+  </div>
+  <div mat-dialog-actions align="end">
+    <a class="dialog-close" (click)="onDone()">Done</a>
+  </div>
+</div>

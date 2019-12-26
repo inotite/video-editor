@@ -1,0 +1,58 @@
+@import '../../../../../color.scss';
+
+.picker-selector {
+    margin-bottom: 16px;
+}
+
+.search-box {
+    position: relative;
+    flex: 1 1 auto;
+    margin-bottom: 16px;
+    margin-top: -8px;
+
+    & .search-icon {
+        position: absolute;
+        left: 4px;
+        top: 4px;
+    }
+
+    & .search-input {
+        font-family: "Nunito Sans";
+        height: 32px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $secondaryColor;
+        padding: 6px 12px 6px 36px;
+        width: 100%;
+    }
+}
+
+.product-type {
+    margin-top: 16px;
+    margin-bottom: 36px;
+
+    & ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        
+        & li {
+            display: inline-block;
+            margin-right: 12px;
+
+            & a {
+                font-family: "Nunito Sans";
+                font-size: 14px;
+                line-height: 20px;
+                color: $secondaryColor;
+            }
+        }
+        
+        & li:last-child {
+            margin-right: 0;
+        }
+    }
+}

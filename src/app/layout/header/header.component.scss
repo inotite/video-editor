@@ -1,0 +1,45 @@
+.app-bar {
+    height: 76px;
+    padding-top: 20px;
+    width: 100%;
+    border-top: 4px solid #9F7AEA;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.sparka {	
+    height: 22px;
+    width: 82px;
+    line-height: 23px;
+}
+
+.sparka img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.app-bar .logo {
+    float: left;
+    margin-left: 106px;
+}
+
+.app-bar .app-bar-button {
+    float: right;
+    margin-right: 102px;
+}
+
+.app-bar .sign-in {
+    text-transform: capitalize;
+    box-sizing: border-box;
+    border: 1px solid #1A202C;
+    opacity: 0.25;
+    border-radius: 4px;
+    height: 32px;
+    width: 80px;
+    padding: 6px 8px;
+    font-family: "Nunito Sans Bold";
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    color: #1A202C;
+    display: block;
+}

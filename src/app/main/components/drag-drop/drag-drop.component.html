@@ -1,0 +1,20 @@
+
+<div class="drop-zone">
+  <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)" (onFileDragOver)="dragOver($event)" (onFileDragLeave)="dragLeave($event)" (onFileNotSupport)="fileNotSupport($event)" #drop>
+      <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)" accept="image/*,video/*">
+      <p class="drop-zone-text" *ngIf="status == 1">Drag-and-drop a file, or <span>browse to upload</span></p>
+      <p class="drop-zone-text" *ngIf="status == 2"><span>Drop file to begin upload</span></p>
+      <p class="drop-zone-text" *ngIf="status == 3"><span class="not-support">File format not supported</span></p>
+      <div class="uploading" fxLayout="column" fxLayoutAlign="center center" *ngIf="status == 4">
+        <p *ngIf="uploadResult.type == 'progress'">{{uploadResult.progress || 0}}% completed...</p>
+        <div *ngIf="uploadResult.type == 'progress'" class="progress-wrapper">
+          <div class="progress-bar" [ngStyle]="{'width.%': uploadResult.progress || 0}"></div>
+        </div>
+        <p *ngIf="uploadResult.type == 'progress'">{{filename}}</p>
+        <p class="complete-upload" *ngIf="uploadResult.type == 'data'">File upload complete!</p>
+      </div>
+  </div>
+  <a class="cancel-upload" (click)="cancelUpload($event)" *ngIf="status == 4 && uploadResult.type == 'progress'">
+    <img src="assets/icons/ic-close-circle.svg">
+  </a>
+</div>

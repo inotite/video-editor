@@ -1,0 +1,11 @@
+<div class="template-container">
+    <p class="sub-header">Quick slides based on real data from your product</p>
+    <ul class="template-list">
+        <li *ngFor="let item of templates">
+            <a href="#">
+                <img src="{{item.src}}" draggable [dragData]="item.data">
+            </a>
+            <p class="title">{{item.text}}</p>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,18 @@
+@import "../../../../../color.scss";
+
+.sub-header {
+	width: 100%;
+	color: $regularTextColor;
+	font-family: "Nunito Sans Bold";
+	font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.text-content {
+	width: 100%;
+	color: $regularTextColor;
+	font-family: "Nunito Sans";
+	font-size: 14px;
+	line-height: 20px;
+}

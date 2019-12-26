@@ -1,0 +1,18 @@
+
+.progress-text {
+	height: 40px;
+	width: 329px;
+	color: #1A202C;
+	font-family: "Nunito Sans Bold";
+	font-size: 24px;
+	font-weight: 900;
+	line-height: 40px;
+}
+
+.progress-bar-container {
+    margin-top: 1rem;
+}
+
+.progress {
+    border-radius: 16px !important;
+}

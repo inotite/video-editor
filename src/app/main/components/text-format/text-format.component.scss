@@ -1,0 +1,108 @@
+@import '../../../../color.scss';
+
+.text-formatter-wrapper {
+    width: 100%;
+    text-align: left;
+}
+
+.text-formatter {
+    height: 48px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.02), 0 4px 6px 1px rgba(0,0,0,0.06);
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+
+    & .highlight-text {
+        margin-left: 24px;
+        cursor: pointer;
+    }
+
+    & .align-select {
+        cursor: pointer;
+
+        & .dropdown-toggle {
+            padding-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        & .dropdown-menu {
+            padding: 0;
+            min-width: 92px;
+            max-width: 92px;
+            border: unset;
+            box-shadow: 0 0 1px 1px rgba(0,0,0,0.02), 0 4px 6px 1px rgba(0,0,0,0.06);
+            border-radius: 4px;
+        }
+
+        & .alignment-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 8px;
+
+            & .text-position {
+                color: $regularTextColor;
+                font-family: "Nunito Sans";
+                font-size: 12px;
+                line-height: 16px;
+                margin-bottom: 8px;
+            }
+
+            & .alignment-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                border-radius: 4px;
+                width: 76px;
+
+                & div {
+                    flex: 0 32%;
+                    height: 24px;
+                    background-color: #EDF2F7;
+                    margin-bottom: 2px;
+
+                    &.selected {
+                        background-color: #2D3748;
+                    }
+
+                    &:hover {
+                        background-color: #CBD5E0;
+                    }
+                }
+            }
+        }
+    }
+
+    & ::ng-deep .mat-button-toggle-label-content {
+        background-color: #EDF2F7;
+        padding: 6px 8px;
+        font-family: "Nunito Sans Bold";
+        font-size: 14px;
+        line-height: 20px;
+        color: $regularTextColor;
+        border: unset;
+        width: 32px;
+
+        &:first-child {
+            border-radius: 4px 0 0 4px;
+        }
+    }
+
+    & ::ng-deep .mat-button-toggle-group-appearance-standard {
+        border: unset;
+
+        & .mat-button-toggle {
+            border: unset;
+        }
+    }
+
+    & ::ng-deep .mat-button-toggle-checked.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+        color: #fff;
+        background-color: $primaryColor;
+    }
+}

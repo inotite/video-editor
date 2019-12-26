@@ -1,0 +1,126 @@
+<div class="scene-preview">
+  <div mat-dialog-title>
+    <p class="dialog-title">Publish your video</p>
+    <a href="javascript:;" class="dialog-title-close" (click)="onClose($event)"
+      ><img src="assets/icons/ic-close.svg"
+    /></a>
+  </div>
+  <div mat-dialog-content>
+    <div class="publish-content" fxLayout="row" fxLayoutGap="18px">
+      <div class="player-row" fxLayout="column" fxLayoutGap="8px">
+        <div
+          class="play-container"
+          [ngClass]="{
+            news: layout == 1,
+            story: layout == 2,
+            carousel: layout == 0
+          }"
+        >
+          <div class="play-screen" id="play-screen">
+            <div
+              *ngFor="let scene of scenes"
+              class="canvas-wrapper"
+              [ngStyle]="{ visibility: scene.visibility }"
+              [ngClass]="{
+                'logo-view': scene.extension == 'logo',
+                'cover-view-x': scene.extension == 'cover' && layout == 1,
+                'cover-view-y': scene.extension == 'cover' && layout == 2
+              }"
+            >
+              <img
+                *ngIf="scene.extension == 'logo'"
+                class="canvas-fit"
+                src="{{ scene.background }}"
+                (load)="onLoadImage($event, scene)"
+                [ngStyle]="{ transform: scene.scale }"
+              />
+              <img
+                *ngIf="scene.extension == 'cover'"
+                class="canvas-fit"
+                src="{{ scene.background }}"
+                (load)="onLoadImage($event, scene)"
+                [ngStyle]="{ transform: scene.scale }"
+              />
+              <img
+                *ngIf="scene.extension == 'image'"
+                class="canvas-fit"
+                src="{{ scene.background }}"
+                (load)="onLoadImage($event, scene)"
+                [ngStyle]="{ transform: scene.scale }"
+              />
+              <video
+                *ngIf="scene.extension == 'video'"
+                class="canvas-fit"
+                loop
+                muted="true"
+                id="{{ scene._id }}"
+              >
+                <source src="{{ scene.video_files[0].link }}" />
+              </video>
+            </div>
+            <div
+              class="text-wrapper"
+              [ngClass]="{
+                'text-cover-view-x': sceneExt == 'cover' && layout == 1,
+                'text-cover-view-y': sceneExt == 'cover' && layout == 2
+              }"
+            >
+              <app-canvas-text
+                [item]="caption"
+                [event]="playSubject.asObservable()"
+                [positionChange]="positionSubject.asObservable()"
+                [styleChange]="styleSubject.asObservable()"
+              ></app-canvas-text>
+            </div>
+          </div>
+          <!-- <div class="cover-screen">
+
+          </div> -->
+        </div>
+        <div
+          class="play-seek-bar"
+          fxLayout="row"
+          fxLayoutAlign="start center"
+          fxLayoutGap="8px"
+        >
+          <a (click)="play($event)" class="play">
+            <img src="assets/icons/ic-play.svg" *ngIf="!playing" />
+            <img src="assets/icons/ic-stop.svg" *ngIf="playing" />
+          </a>
+          <div class="progress-wrapper">
+            <div class="progress" [ngStyle]="{ 'width.%': progress }"></div>
+          </div>
+        </div>
+      </div>
+      <div class="func" fxLayout="column" fxLayoutGap="40px">
+        <div class="quality-wrapper" fxLayout="column">
+          <p class="quality-title">Quality</p>
+          <div ngbDropdown class="filter-select">
+            <a class="btn" id="filter-select" ngbDropdownToggle>Best(1080p)</a>
+            <div ngbDropdownMenu aria-labelledby="filter-select">
+              <span ngbDropdownItem>Best(1080p)</span>
+              <span ngbDropdownItem>Good(720p)</span>
+            </div>
+          </div>
+        </div>
+        <div class="publish-to" fxLayout="column" fxLayoutGap="8px">
+          <a class="download" fxLayout="row" fxLayoutGap="8px" (click)="onDownload($event)">
+            <img src="assets/icons/ic-download.svg" />
+            <span>Download</span>
+          </a>
+          <a class="facebook" fxLayout="row" fxLayoutGap="8px" (click)="onPublishFacebook($event)">
+            <img src="assets/icons/ic-facebook.svg" />
+            <span>Publish to Facebook</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <a class="remove-credit-scene">
+      Remove credit scene
+    </a>
+  </div>
+  <div mat-dialog-actions align="end">
+    <a class="dialog-report" (click)="onCancel($event)">Cancel</a>
+    <a class="dialog-close" (click)="onDone($event)">Done</a>
+  </div>
+</div>

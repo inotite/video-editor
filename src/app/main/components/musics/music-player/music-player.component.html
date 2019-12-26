@@ -1,0 +1,28 @@
+<div *ngIf="item.type == 0" class="music-player">
+  <span class="play-button" (click)="handleMusic(item.url)">
+    <img *ngIf="paused || playingId != item._id || playingType != item.type" src="assets/icons/ic-play.svg">
+    <img *ngIf="!paused && playingId == item._id && playingType == item.type" src="assets/icons/ic-stop.svg">
+  </span>
+  <span class="music-title">{{item.name}}</span>
+  <a class="apply-button" (click)="applyMusic()">Apply</a>
+</div>
+<div *ngIf="item.type == 1" class="music-player applied">
+  <span class="play-button" (click)="handleMusic(item.url)">
+    <img *ngIf="paused || playingId != item._id || playingType != item.type" src="assets/icons/ic-play.svg">
+    <img *ngIf="!paused && playingId == item._id && playingType == item.type" src="assets/icons/ic-stop.svg">
+  </span>
+  <span class="music-title">{{item.name}}</span>
+  <span class="select-badge">Selected</span>
+  <a class="apply-button" (click)="removeMusic()">Remove</a>
+</div>
+<div *ngIf="item.type == 2" class="music-player">
+  <span class="play-button" (click)="handleMusic(item.url)">
+    <img *ngIf="paused && playingId != item._id" src="assets/icons/ic-play.svg">
+    <img *ngIf="!paused || playingId == item._id" src="assets/icons/ic-stop.svg">
+  </span>
+  <span class="music-title">{{item.name}}</span>
+  <a class="apply-button" routerLink="/">Apply</a>
+  <a class="remove-button" routerLink="/">
+    <img src="assets/icons/ic-trash.svg">
+  </a>
+</div>

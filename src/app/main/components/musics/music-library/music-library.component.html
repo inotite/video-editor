@@ -1,0 +1,14 @@
+
+<div class="search-box">
+    <img class="search-icon" src="assets/icons/editor/search.svg">
+    <input type="text" class="form-control search-input" placeholder="Search millions videos and photos">
+</div>
+<div class="product-type">
+    <ul>
+        <li *ngFor="let item of types">
+            <a routerLink="{{item.link}}">{{item.text}}</a>
+        </li>
+    </ul>
+</div>
+<app-music-player *ngIf="appliedMusic" [item]="appliedMusic"></app-music-player>
+<app-music-list [items]="musics"></app-music-list>

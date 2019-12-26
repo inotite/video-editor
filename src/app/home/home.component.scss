@@ -1,0 +1,108 @@
+
+.create-engaging-video {
+	height: 96px;
+	width: 650px;
+	color: #1A202C;
+	font-family: "Nunito Sans";
+	font-size: 48px;
+	font-weight: 900;
+	line-height: 48px;
+    text-align: center;
+    margin: 70px auto 0;
+}
+
+.start-now-it-s-fast {
+	height: 40px;
+	width: 376px;
+	color: #4A5568;
+	font-family: "Nunito Sans Bold";
+	font-size: 24px;
+	line-height: 40px;
+    text-align: center;
+    margin: 16px auto 55px;
+}
+
+.circle {
+    height: 193px;
+    width: 193px;
+    background-color: #E9D8FD;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+.circle1 {
+    top: 61px;
+    left: -34px;
+}
+
+.rel-div {
+    position: relative;
+}
+
+.home-url {
+    height: 56px;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.02), 0 4px 6px 1px rgba(0, 0, 0, 0.06);
+    font-family: "Nunito Sans";
+    color: #1A202C;
+    opacity: 0.5;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 14px 16px;
+}
+
+.video-button {
+    height: 56px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background-color: #9F7AEA;
+    color: #FFF !important;
+    font-family: "Nunito Sans Bold";
+    font-size: 18px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.search-container {
+    margin-bottom: 60px;
+}
+
+.add-a-spark-of-video {
+	height: 40px;
+	color: #4A5568;
+	font-family: "Nunito Sans Bold";
+	font-size: 24px;
+	line-height: 40px;
+    margin-top: 160px;
+}
+
+.sign-up-container {
+    margin-top: 32px;
+    margin-bottom: 112px;
+}
+
+.sign-up-btn {
+    background-color: #3B5998;
+    border-radius: 4px;
+    height: 40px;
+    width: 240px;
+    color: #fff;
+    font-family: "Nunito Sans Bold";
+    font-size: 16px;
+    line-height: 24px;
+    background-repeat: no-repeat;
+    background-position: 8px 8px;
+}
+
+.facebook-sign-up {
+    margin-right: 16px;
+    background-position: 5px 7px;
+    background-image: url(../../assets/icons/login/facebook.svg);
+    fill: #fff;
+}
+
+.email-sign-up {
+    background-color: #9F7AEA;
+    background-image: url(../../assets/icons/login/mail.svg);
+}

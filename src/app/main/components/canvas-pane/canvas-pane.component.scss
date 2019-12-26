@@ -1,0 +1,318 @@
+@import "../../../../color.scss";
+
+.canvas-wrapper {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  & .canvas-pane {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.02),
+      0 4px 6px 1px rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+
+    & .canvas-draw {
+      width: 100%;
+      padding-top: 56.25%;
+      position: relative;
+
+      & .canvas-draw-image {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        & .draw-wrapper {
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+
+          & .canvas-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+
+          & .show-canvas {
+            display: block;
+          }
+
+          & .cover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        & .cover-view-x {
+          left: 50%;
+          width: 50%;
+        }
+
+        & .cover-view-y {
+          height: 50%;
+        }
+
+        & .logo-view {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & .canvas-image {
+            position: relative;
+          }
+        }
+      }
+
+      & .overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: transparent;
+      }
+
+      & .width-scale {
+        width: 100%;
+      }
+
+      & .height-scale {
+        height: 100%;
+      }
+
+      & .text-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        & app-canvas-text {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          position: absolute;
+          flex-direction: column;
+          align-items: flex-start;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      & .text-cover-view-x {
+        width: 50%;
+      }
+
+      & .text-cover-view-y {
+        height: 50%;
+        top: 50%;
+      }
+    }
+
+    & .drag-target-border {
+      mask-type: alpha;
+      background-color: #fff;
+    }
+
+    & .player-control-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 6px 8px;
+      background-color: #fff;
+
+      & ::ng-deep .mat-progress-bar-fill::after {
+        background-color: $primaryColor;
+      }
+
+      & ::ng-deep .mat-progress-bar-buffer {
+        background-color: #f3f4f4;
+      }
+
+      & ::ng-deep .mat-progress-bar {
+        border-radius: 2px;
+      }
+
+      & .player-control {
+        margin-top: 6px;
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+
+        & .video-duration {
+          cursor: pointer;
+
+          & .duration-title {
+            color: $regularTextColor;
+            font-family: "Nunito Sans";
+            font-size: 12px;
+            line-height: 16px;
+          }
+
+          & .duration-toggle {
+            padding: 8px;
+          }
+
+          & .duration-container {
+            display: flex;
+            flex-direction: row;
+
+            & a,
+            span {
+              font-family: "Nunito Sans";
+              box-sizing: border-box;
+              border: 1px solid #1a202c40;
+              opacity: 1;
+              border-radius: 4px;
+              height: 32px;
+              line-height: 32px;
+              text-align: center;
+            }
+
+            & .duration-dec,
+            .duration-inc {
+              width: 32px;
+
+              &:hover {
+                background-color: #edf2f7;
+              }
+            }
+
+            & .duration-time {
+              flex: 1;
+              background-color: #edf2f7;
+              text-align: center;
+              margin: 0 8px;
+            }
+          }
+
+          & span {
+            color: $regularTextColor;
+            font-family: "Nunito Sans";
+            font-size: 14px;
+            line-height: 20px;
+            opacity: 0.5;
+            margin-left: 6px;
+          }
+        }
+
+        & .play-stop {
+          cursor: pointer;
+        }
+
+        & .dropdown-toggle:after {
+          display: none;
+        }
+
+        & .video-menu {
+          cursor: pointer;
+
+          & .dropdown-menu {
+            border: unset;
+            border-radius: 4 !important;
+            background-color: #fff;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.02),
+              0 4px 6px 1px rgba(0, 0, 0, 0.06);
+
+            & ul {
+              padding: 0;
+              margin: 0;
+              list-style: none;
+
+              & li {
+                padding: 6px 8px;
+
+                & a {
+                  height: 20px;
+                  font-family: "Nunito Sans";
+                  font-size: 14px;
+                  line-height: 20px;
+                  color: $regularTextColor;
+                }
+
+                &:hover {
+                  background-color: #edf2f7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .canvas-control-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8px 0;
+    height: 24px;
+
+    & .canvas-control {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 16px;
+
+      & a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      & span {
+        color: $regularTextColor;
+        font-family: "Nunito Sans";
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 8px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+::ng-deep .ps-indicator-top,
+::ng-deep .ps-indicator-bottom {
+  background: transparent !important;
+}
+
+::ng-deep .drag-hint-border {
+  outline: 2px dashed $primaryColor;
+  border: none;
+  background-color: #9f7fea99;
+
+  & .overlay {
+    background-color: #9f7fea99 !important;
+  }
+
+  &.drag-over-border {
+    background-color: #9f7feae6;
+
+    & .overlay {
+      background-color: #9f7feae6 !important;
+    }
+  }
+}
+
+::ng-deep .drag-border {
+  border: none;
+  outline: 2px dashed $primaryColor;
+}

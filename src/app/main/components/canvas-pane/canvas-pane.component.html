@@ -1,0 +1,129 @@
+<div
+  class="canvas-wrapper"
+  (mouseenter)="onShowControls($event)"
+  (mouseleave)="onHideControls($event)"
+>
+  <div class="canvas-pane">
+    <div class="canvas-draw" droppable (onDrop)="onItemDrop($event)">
+      <div class="canvas-draw-image">
+        <div
+          class="draw-wrapper"
+          [ngClass]="{
+            'logo-view': item.extension == 'logo',
+            'cover-view-x': item.extension == 'cover' && layoutId == 1,
+            'cover-view-y': item.extension == 'cover' && layoutId == 2
+          }"
+        >
+          <img
+            #canvasImage
+            *ngIf="item.extension != 'video'"
+            class="canvas-image"
+            src="{{ item.background }}"
+            (load)="onLoadImage($event)"
+            [attr.data-ratio]="item.ratio"
+          />
+          <video
+            #canvasVideo
+            loop
+            muted="true"
+            *ngIf="item.extension == 'video'"
+            class="canvas-image"
+            [attr.data-ratio]="item.ratio"
+          >
+            <source
+              src="{{
+                item.video_files[0].link || dragData.video_files[0].link
+              }}"
+            />
+          </video>
+        </div>
+        <div class="overlay"></div>
+      </div>
+      <div
+        class="text-wrapper"
+        [ngClass]="{
+          'text-cover-view-x': item.extension == 'cover' && layoutId == 1,
+          'text-cover-view-y': item.extension == 'cover' && layoutId == 2
+        }"
+      >
+        <app-canvas-text
+          [item]="item.caption"
+          [event]="playSubject.asObservable()"
+          [positionChange]="positionSubject.asObservable()"
+          [styleChange]="styleSubject.asObservable()"
+        ></app-canvas-text>
+      </div>
+    </div>
+    <div class="player-control-wrapper">
+      <mat-progress-bar [mode]="'determinate'" [value]="videoProg">
+      </mat-progress-bar>
+      <div class="player-control">
+        <div
+          class="video-duration"
+          ngbDropdown
+          [autoClose]="true"
+          placement="top-left"
+        >
+          <a id="video-duration" ngbDropdownToggle>
+            <img src="assets/icons/ic-clock.svg" />
+            <span>{{ item.duration }}</span>
+          </a>
+          <div
+            class="duration-toggle"
+            ngbDropdownMenu
+            aria-labelledby="video-duration"
+          >
+            <p class="duration-title">Duration (seconds)</p>
+            <div class="duration-container">
+              <a class="duration-dec" (click)="decreaseDuration($event)">-</a>
+              <span #durationVal class="duration-time" contenteditable="true" (keyup)="durationChange($event)">{{
+                item.duration
+              }}</span>
+              <a class="duration-inc" (click)="increaseDuration($event)">+</a>
+            </div>
+          </div>
+        </div>
+        <a class="play-stop" (click)="playStop($event)">
+          <img src="assets/icons/{{ playing ? 'ic-stop' : 'ic-play' }}.svg" />
+        </a>
+        <div
+          class="video-menu"
+          ngbDropdown
+          [autoClose]="true"
+          placement="top-right"
+        >
+          <a id="video-menu" ngbDropdownToggle>
+            <img src="assets/icons/ic-more.svg" />
+          </a>
+          <div ngbDropdownMenu aria-labelledby="video-menu">
+            <ul>
+              <li>
+                <a (click)="duplicateSlide()">Duplicate</a>
+              </li>
+              <li>
+                <a (click)="deleteSlide()">Delete</a>
+              </li>
+              <li>
+                <a (click)="advancedSlide()">Advanced</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="canvas-control-wrapper" droppable (onDrop)="onNewSlide($event)">
+    <div class="canvas-control" #addScene>
+      <a (click)="onAddScene($event)">
+        <img src="assets/icons/ic-add-circle.svg" />
+        <span>Slide</span>
+      </a>
+    </div>
+    <div class="canvas-control" #addSubScene>
+      <a (click)="onAddSubScene($event)">
+        <img src="assets/icons/ic-add-circle.svg" />
+        <span>Sub-slide</span>
+      </a>
+    </div>
+  </div>
+</div>

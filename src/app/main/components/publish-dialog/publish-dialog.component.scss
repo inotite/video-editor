@@ -1,0 +1,287 @@
+@import "../../../../color.scss";
+
+.scene-preview {
+  font-family: "Nunito Sans Bold";
+  font-size: 14px;
+  color: $regularTextColor;
+
+  ::ng-deep .mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ::ng-deep .mat-dialog-title {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .dialog-title {
+    margin-bottom: 0;
+  }
+
+  .grayed {
+    opacity: 0.5;
+    color: #000;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .dialog-title-close {
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .publish-content {
+    width: 100%;
+
+    .player-row {
+      width: 50%;
+
+      .play-container {
+        position: relative;
+        margin: 0 auto 8px;
+
+        .play-screen {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+
+          .canvas-wrapper {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            .canvas-fit {
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+
+            .width-scale {
+              width: 100%;
+            }
+
+            .height-scale {
+              height: 100%;
+            }
+          }
+
+          .cover-view-x {
+            left: 50%;
+            width: 50%;
+          }
+
+          .cover-view-y {
+            height: 50%;
+          }
+
+          .logo-view {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .canvas-fit {
+              position: relative;
+            }
+          }
+
+          .text-wrapper {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            app-canvas-text {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              position: absolute;
+              flex-direction: column;
+              align-items: flex-start;
+              left: 0;
+              top: 0;
+            }
+          }
+
+          .text-cover-view-x {
+            width: 50%;
+          }
+
+          .text-cover-view-y {
+            height: 50%;
+            top: 50%;
+          }
+        }
+
+        &.news {
+          width: 320px;
+          height: 180px;
+        }
+
+        &.story {
+          width: 180px;
+          height: 320px;
+        }
+
+        &.carousel {
+          width: 180px;
+          height: 180px;
+        }
+      }
+
+      .play-seek-bar {
+        background-color: #1A202C0C;
+        padding: 8px;
+        width: 100%;
+
+        .play {
+          cursor: pointer;
+        }
+
+        .progress-wrapper {
+          border-radius: 2px;
+          height: 4px;
+          background-color: #1a202c0c;
+          position: relative;
+          width: 100%;
+
+          .progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: $primaryColor;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+
+    .func {
+      width: 50%;
+
+      .quality-wrapper {
+        .quality-title {
+          color: $regularTextColor;
+          font-family: "Nunito Sans Bold";
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 0;
+        }
+        .filter-select {
+          .dropdown-toggle {
+            position: relative;
+            display: inline-block;
+            border: 1px solid #1a202c40;
+            border-radius: 4px;
+            box-sizing: border-box;
+            height: 32px;
+            width: 153px;
+            color: $regularTextColor;
+            font-size: 14px;
+            font-family: "Nunito Sans";
+            line-height: 20px;
+            padding: 6px 8px;
+            font-weight: normal;
+            text-align: left;
+
+            &::after {
+              position: absolute;
+              top: 14px;
+              right: 8px;
+            }
+          }
+
+          .dropdown-menu {
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.02),
+              0 4px 6px 1px rgba(0, 0, 0, 0.06);
+            // width: 264px;
+            font-family: "Nunito Sans";
+            padding: 3px 7px 11px;
+            border: unset;
+            border-radius: 4px;
+
+            ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+
+              li {
+                display: flex;
+                padding: 6px 8px;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
+      .publish-to {
+        a {
+          border-radius: 4px;
+          color: #fff;
+          font-family: "Nunito Sans Bold";
+          font-size: 16px;
+          line-height: 24px;
+          padding: 8px 12px;
+          width: 100%;
+          cursor: pointer;
+        }
+
+        .download {
+          background-color: $primaryColor;
+        }
+
+        .facebook {
+          background-color: #3b5998;
+        }
+      }
+    }
+  }
+
+  .remove-credit-scene {
+    opacity: 0.5;
+    color: $regularTextColor;
+    font-family: "Nunito Sans Bold";
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 4px;
+    background-color: #1A202C0C;
+    padding: 4px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    width: 128px;
+  }
+
+  .dialog-report {
+    cursor: pointer;
+    padding: 6px 14px;
+    width: 88px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: "Nunito Sans Bold";
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #1A202C80;
+  }
+
+  .dialog-close {
+    cursor: pointer;
+    padding: 6px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: $primaryColor;
+    width: 88px;
+  }
+}

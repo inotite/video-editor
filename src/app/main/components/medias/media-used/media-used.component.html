@@ -1,0 +1,39 @@
+<div ngbDropdown class="filter-select">
+  <a class="btn" id="filter-select" ngbDropdownToggle>Filter</a>
+  <div ngbDropdownMenu aria-labelledby="filter-select">
+    <ul>
+      <li>
+        <mat-checkbox>Product Media</mat-checkbox>
+      </li>
+      <li>
+        <mat-checkbox>Stock Media</mat-checkbox>
+      </li>
+      <li>
+        <mat-checkbox>Uploaded Media</mat-checkbox>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="template-container">
+  <ul class="template-list">
+    <li *ngFor="let item of items" draggable [dragData]="item">
+      <a routerLink="['/']">
+        <img src="{{item.src.tiny}}" *ngIf="item.extension == 'cover' || item.extension == 'logo' || item.extension == 'image' || (item.extension == 'media' && item.background_type == 'image')">
+        <video preload="none" loop *ngIf="item.extension == 'video' || (item.extension == 'media' && item.background_type == 'video')" (mouseover)="playVideo($event)" (mouseout)="stopVideo($event)"
+          draggable [dragData]="item" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+          <source src="{{item.video_files[0].link}}">
+        </video>
+      </a>
+      <span class="play-button" *ngIf="item.extension == 'video' || (item.extension == 'media' && item.background_type == 'video')">
+        <img src="assets/icons/ic-play.svg">
+      </span>
+      <span class="media-tag" fxLayout="row" fxLayoutAlign="center center">
+        <img *ngIf="item.type == 'upload'" src="assets/icons/ic-uploaded-media.svg">
+        <!-- <img *ngIf="item.type == 'stock'" src="assets/icons/ic-stock.svg"> -->
+        <img *ngIf="item.type != 'upload'" src="assets/icons/ic-stock.svg">
+      </span>
+    </li>
+  </ul>
+</div>
+
+<app-drag-drop></app-drag-drop>

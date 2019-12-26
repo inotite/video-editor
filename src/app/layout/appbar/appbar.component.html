@@ -1,0 +1,17 @@
+<div class="app-bar-dark">
+    <div class="logo">
+        <a class="sparka" [routerLink]="['/']">
+            <img src="assets/images/brand/sparka-light.svg" >
+        </a>
+    </div>
+    <div *ngIf="!loading">
+        <a class="upgrade" [routerLink]="['/']">Upgrade</a>
+    </div>
+    <div class="app-bar-menu" *ngIf="!loading">
+        <ul>
+            <li><a class="preview" (click)="onPreview($event)">Preview</a></li>
+            <li><a class="publish" (click)="onPublish($event)">Publish</a></li>
+            <li class="right-menu"><a [routerLink]="['/preview']"><img src="assets/icons/topbar/list-light.svg"></a></li>
+        </ul>
+    </div>
+</div>

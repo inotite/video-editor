@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>icon/story</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/story" transform="translate(0.000000, -1.000000)" fill="#718096" fill-rule="nonzero">
+            <path d="M0.393,1.205 C0.642,1.016 0.966,0.954 1.263,1.035 L1.263,1.035 L11,3.691 L11,22.764 L0.737,19.965 C0.302,19.846 0,19.451 0,19 L0,19 L0,2 C0,1.688 0.146,1.395 0.393,1.205 Z M22.737,1.035 C23.035,0.955 23.359,1.017 23.607,1.205 C23.854,1.395 24,1.688 24,2 L24,2 L24,19 C24,19.451 23.698,19.846 23.263,19.965 L23.263,19.965 L13,22.764 L13,3.691 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

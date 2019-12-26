@@ -1,0 +1,12 @@
+<p class="sub-header">Start by selecting a story template for your video 👇</p>
+<div class="template-container">
+  <ul class="template-list">
+    <li *ngFor="let item of stories">
+      <a (click)="onStorySelect(item._id)" [ngClass]="{'active': selected == item._id}">
+        <img src="{{item.image}}">
+      </a>
+      <span *ngIf="selected == item._id">selected</span>
+      <p>{{item.name}}</p>
+    </li>
+  </ul>
+</div>

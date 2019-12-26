@@ -1,0 +1,52 @@
+@import '../../../../../color.scss';
+
+.social-single-slide {
+	height: 96px;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.02), 0 4px 6px 1px rgba(0,0,0,0.06);
+	box-sizing: border-box;
+	border: 4px solid transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	
+	&:hover, &.slide-active {
+		border: 4px solid $primaryColor;
+	}
+
+	&.slide-active {
+
+		& .slide-checked {
+			display: flex;
+			position: absolute;
+			left: 8px;
+			top: 8px;
+			width: 32px;
+			height: 32px;
+			background-color: $primaryColor;
+			border-radius: 4px;
+			align-items: center;
+			justify-content: center;
+
+			& img {
+				width: 16px;
+				height: 16px;
+
+			}
+		}
+	}
+	
+	& .slide-checked {
+		display: none;
+	}
+}
+
+.social-single-title {
+	height: 16px;
+	color: $regularTextColor;
+	font-family: "Nunito Sans";
+	font-size: 12px;
+	line-height: 16px;
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="112px" height="56px" viewBox="0 0 112 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>landscape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="112" height="56"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Format/Landscape" transform="translate(-8.000000, -20.000000)">
+            <g id="landscape" transform="translate(8.000000, 20.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#EDF2F7" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="Group-8" mask="url(#mask-2)">
+                    <g transform="translate(-9.000000, 8.000000)">
+                        <polygon id="Rectangle" fill="#CBD5E0" fill-rule="nonzero" points="102.89762 6.19421469 118.256564 27.8363631 87.5386763 27.8363631"></polygon>
+                        <polygon id="Rectangle" fill="#CBD5E0" fill-rule="nonzero" points="61.1058855 6.19421469 76.4648295 27.8363631 45.7469415 27.8363631"></polygon>
+                        <polygon id="Rectangle" fill="#CBD5E0" fill-rule="nonzero" points="25.2843985 6.19421469 40.6433425 27.8363631 9.92545446 27.8363631"></polygon>
+                        <polygon id="Rectangle" fill="#CBD5E0" fill-rule="nonzero" points="76.2000201 0.223966853 98.444008 27.8363631 53.9560322 27.8363631"></polygon>
+                        <g id="Group-2" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(16.641983, 20.373553)">
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="80.2252052 0 82.8371887 7.46280979 77.6132218 7.46280979"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="76.4938004 2.23884294 79.1057838 9.70165273 73.8818169 9.70165273"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="68.2847096 0 70.896693 7.46280979 65.6727262 7.46280979"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="43.6574373 1.49256196 46.2694207 8.95537175 41.0454538 8.95537175"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="41.4185943 0 44.0305778 7.46280979 38.8066109 7.46280979"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="37.6871894 1.49256196 40.2991729 8.95537175 35.075206 8.95537175"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="22.0152889 0 24.6272723 7.46280979 19.4033055 7.46280979"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="2.61198343 0 5.22396685 7.46280979 0 7.46280979"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="8.58223126 0 11.1942147 7.46280979 5.97024783 7.46280979"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="6.34338832 1.49256196 8.95537175 8.95537175 3.7314049 8.95537175"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="58.5830569 1.49256196 61.1950403 8.95537175 55.9710734 8.95537175"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="56.3442139 0 58.9561973 7.46280979 53.7322305 7.46280979"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="53.35909 1.49256196 55.9710734 8.95537175 50.7471066 8.95537175"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="51.1202471 0 53.7322305 7.46280979 48.5082636 7.46280979"></polygon>
+                            <polygon id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" points="83.9566101 2.23884294 86.5685936 9.70165273 81.3446267 9.70165273"></polygon>
+                        </g>
+                        <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="94.7314049" cy="3.7314049" r="3.7314049"></circle>
+                        <rect id="Rectangle" fill="#718096" fill-rule="nonzero" x="0.926280056" y="27.8363631" width="128" height="14.9256196"></rect>
+                        <rect id="Rectangle" fill="#A0AEC0" fill-rule="nonzero" x="1.10644425" y="33.8066109" width="128" height="14"></rect>
+                        <g id="Group-3" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(46.493222, 33.806611)">
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="24.6272723" y="1.49256196" width="7.46280979" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="40.2991729" y="2.98512392" width="7.46280979" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="24.6272723" y="4.47768587" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="32.8363631" y="2.98512392" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="51.4933876" y="4.47768587" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="49.2545446" y="1.49256196" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="38.0603299" y="0" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="34.328925" y="5.97024783" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="41.0454538" y="7.46280979" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="29.1049582" y="7.46280979" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="14.1793386" y="4.47768587" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="0" y="5.97024783" width="2.98512392" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="4.47768587" y="2.98512392" width="2.23884294" height="1.49256196" rx="0.746280979"></rect>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="36.567768" y="9.70165273" width="4.47768587" height="1.49256196" rx="0.746280979"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

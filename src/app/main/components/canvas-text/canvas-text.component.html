@@ -1,0 +1,10 @@
+<div class="subtitle-wrapper" (clickOutside)="checkShowBox($event)">
+  <app-text-format *ngIf="showBox" (fontSizeEvent)="onFontSizeChange($event)"
+    (alignmentEvent)="onAlignmentChange($event)" (highlightEvent)="onHighlightText($event)"
+    [textPosition]="item.position" [textSize]="item.size" [highlight]="item.highlight">
+  </app-text-format>
+  <div class="editable-wrapper">
+    <div #subtitle class="subtitle" contenteditable="true" (paste)="onPaste($event)" (focus)="onFocus($event)" (blur)="onBlur($event)" [style.font-size.px]="fontSize"
+      [@slideInLeft]="state" (keydown)="onKeyDown($event)" [style.padding-right.px]="paddingRight" [style.margin-left.px]="marginLeft" [style.transform]="'translateX(' + transform + '%)'" [style.color]="textColor" [style.background-color]="backgroundColor" [style.font-family]="fontFace" [innerHTML]="item.text"></div>
+  </div>
+</div>
